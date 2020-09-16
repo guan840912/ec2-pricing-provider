@@ -40,7 +40,7 @@ def region_map(region:str):
         if region=='me-south-1':
             region_physical_name='Middle East (Bahrain)'
         if region=='sa-east-1':
-            region_physical_name='South America (São Paulo)'
+            region_physical_name='South America (Sao Paulo)'
         
     except:
         print ('not_region_keys') 
@@ -157,6 +157,7 @@ print("'eu-west-1' " + getinstancepricing('t2.micro','eu-west-1'))
 print("'eu-west-2' " + getinstancepricing('t2.micro','eu-west-2'))
 print("'eu-north-1' " + getinstancepricing('t2.micro','eu-north-1'))
 print("'eu-south-1' " + getinstancepricing('t2.micro','eu-south-1'))
+print("'sa-east-1' " + getinstancepricing('t2.micro','sa-east-1'))
 
 
 print ("all region test t4g.medium")

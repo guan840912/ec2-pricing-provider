@@ -21,7 +21,7 @@ Easy to get aws ec2 on-demand pricing
 |eu-west-2|EU (London)|
 |eu-west-3|EU (Paris)|
 |me-south-1|Middle East (Bahrain)|
-|sa-east-1|South America (São Paulo)|
+|sa-east-1|South America (Sao Paulo)|
 
 
 ```bash 
