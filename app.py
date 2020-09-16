@@ -118,68 +118,18 @@ def getinstancepricing(instanceType:str or None ,region:str ):
         res = str('%g'%(float(price)))
     return res
 
-#print("us-east-1")
-#print("m6g.medium "+getinstancepricing('m6g.medium', 'us-east-1'))
-#print("m6g.large "+getinstancepricing('m6g.large','us-east-1'))
-#print("t4g.medium "+getinstancepricing('t4g.medium','us-east-1'))
-#print("t4g.large "+ getinstancepricing('t4g.large','us-east-1'))
-#print("t4g.xlarge "+ getinstancepricing('t4g.xlarge','us-east-1'))
-#print("t4g.2xlarge "+ getinstancepricing('t4g.2xlarge','us-east-1')) 
-#
-#print("ap-northeast-1")
-#print("m6g.medium "+getinstancepricing('m6g.medium','ap-northeast-1'))
-#print("m6g.large "+getinstancepricing('m6g.large','ap-northeast-1'))
-#print("t4g.medium "+getinstancepricing('t4g.medium','ap-northeast-1'))
-#print("t4g.large "+ getinstancepricing('t4g.large','ap-northeast-1'))
-#print("t4g.xlarge "+ getinstancepricing('t4g.xlarge','ap-northeast-1'))
-#print("t4g.2xlarge "+ getinstancepricing('t4g.2xlarge','ap-northeast-1'))
-
 print ("all region test t2.micro")
-print("'us-east-1' " + getinstancepricing('t2.micro','us-east-1'))
-print("'us-east-2' " + getinstancepricing('t2.micro','us-east-2'))
-print("'us-west-1' " + getinstancepricing('t2.micro','us-west-1'))
-print("'us-west-2' " + getinstancepricing('t2.micro','us-west-2'))
 
-print("'af-south-1' " + getinstancepricing('t2.micro','af-south-1'))
+region = [  'us-east-1','us-east-2','us-west-2','us-west-1',
+            'af-south-1','ap-east-1','ap-south-1','ap-northeast-2',
+            'ap-northeast-1','ap-southeast-1','ap-southeast-2',
+            'ca-central-1','eu-central-1','eu-west-1',
+            'eu-west-2','eu-west-3','eu-north-1','eu-south-1',
+            'sa-east-1'
+]
 
-print("'ap-east-1' " + getinstancepricing('t2.micro','ap-east-1'))
-print("'ap-south-1' " + getinstancepricing('t2.micro','ap-south-1'))
-print("'ap-northeast-2' " + getinstancepricing('t2.micro','ap-northeast-2'))
-print("'ap-southeast-1' " + getinstancepricing('t2.micro','ap-southeast-1'))
-print("'ap-southeast-2' " + getinstancepricing('t2.micro','ap-southeast-2'))
-print("'ap-northeast-1' " + getinstancepricing('t2.micro','ap-northeast-1'))
+def run(instancetype):
+    for i in region:
+        print(f'{i} USD {getinstancepricing(instancetype,i)}'.format(i))
 
-print("'ca-central-1' " + getinstancepricing('t2.micro','ca-central-1'))
-
-print("'eu-central-1' " + getinstancepricing('t2.micro','eu-central-1'))
-print("'eu-west-3' " + getinstancepricing('t2.micro','eu-west-3'))
-print("'eu-west-1' " + getinstancepricing('t2.micro','eu-west-1'))
-print("'eu-west-2' " + getinstancepricing('t2.micro','eu-west-2'))
-print("'eu-north-1' " + getinstancepricing('t2.micro','eu-north-1'))
-print("'eu-south-1' " + getinstancepricing('t2.micro','eu-south-1'))
-print("'sa-east-1' " + getinstancepricing('t2.micro','sa-east-1'))
-
-
-print ("all region test t4g.medium")
-print("'us-east-1' " + getinstancepricing('t4g.medium','us-east-1'))
-print("'us-east-2' " + getinstancepricing('t4g.medium','us-east-2'))
-print("'us-west-1' " + getinstancepricing('t4g.medium','us-west-1'))
-print("'us-west-2' " + getinstancepricing('t4g.medium','us-west-2'))
-
-print("'af-south-1' " + getinstancepricing('t4g.medium','af-south-1'))
-
-print("'ap-east-1' " + getinstancepricing('t4g.medium','ap-east-1'))
-print("'ap-south-1' " + getinstancepricing('t4g.medium','ap-south-1'))
-print("'ap-northeast-2' " + getinstancepricing('t4g.medium','ap-northeast-2'))
-print("'ap-southeast-1' " + getinstancepricing('t4g.medium','ap-southeast-1'))
-print("'ap-southeast-2' " + getinstancepricing('t4g.medium','ap-southeast-2'))
-print("'ap-northeast-1' " + getinstancepricing('t4g.medium','ap-northeast-1'))
-
-print("'ca-central-1' " + getinstancepricing('t4g.medium','ca-central-1'))
-
-print("'eu-central-1' " + getinstancepricing('t4g.medium','eu-central-1'))
-print("'eu-west-3' " + getinstancepricing('t4g.medium','eu-west-3'))
-print("'eu-west-1' " + getinstancepricing('t4g.medium','eu-west-1'))
-print("'eu-west-2' " + getinstancepricing('t4g.medium','eu-west-2'))
-print("'eu-north-1' " + getinstancepricing('t4g.medium','eu-north-1'))
-print("'eu-south-1' " + getinstancepricing('t4g.medium','eu-south-1'))
+run('t2.micro')
